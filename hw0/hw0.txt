@@ -1,0 +1,39 @@
+Assignment purpose:
+Help me get to know a little bit about you
+Confirm your Python/Jupyter environment is working
+Provide a practice assignment for submitting a clean, working notebook
+Help me gauge coding skills across the class
+Instructions:
+In this assignment you will create your first official Python-based deliverable. Your work should be submitted as a Jupyter notebook (.ipynb) file and should make use of both code and markdown cells, with clear annotation of your code. This assignment should be mostly review (although if it is not, please let me know that in the reflection section).
+
+Part 1 — About You (10 points)
+In markdown cells, briefly answer:
+
+Why are you pursuing the MSBA program?
+What did you do before entering the program?
+What type of role, industry, or company are you interested in after graduation?
+What topics or methods are you most interested in learning in this course?
+Part 2 — Cost of Living & Salary (30 points)
+Use Python to create an estimate of your expected cost of living for three different locations where you might want to live after completing the MSBA program. This should be compared with your salary needs as well as your desired salary (which may vary by location). Your notebook should include:
+
+Monthly cost of living broken into categories (e.g., housing, food, transportation)
+A calculation of:
+minimum annual salary needed
+desired (target) salary
+You are welcome to include additional data if it helps support your analysis or visualization.
+
+Requirements:
+At least 5 variables
+At least 2 calculations
+One organized data structure (dataframe, dictionary, etc).
+One simple plot
+Your code should be structured so that:
+
+key inputs (e.g., rent, salary assumptions) are clearly defined
+changing those inputs and re-running the notebook updates all results correctly
+Part 3 — Reflection (10 points)
+Briefly answer:
+
+Did your notebook run successfully from start to finish?
+How long did this assignment take you?
+What is one technical skill you feel confident about, and one you want to strengthen?
