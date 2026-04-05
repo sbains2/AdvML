@@ -13,6 +13,8 @@ Why are you pursuing the MSBA program?
 What did you do before entering the program?
 What type of role, industry, or company are you interested in after graduation?
 What topics or methods are you most interested in learning in this course?
+
+
 Part 2 — Cost of Living & Salary (30 points)
 Use Python to create an estimate of your expected cost of living for three different locations where you might want to live after completing the MSBA program. This should be compared with your salary needs as well as your desired salary (which may vary by location). Your notebook should include:
 
