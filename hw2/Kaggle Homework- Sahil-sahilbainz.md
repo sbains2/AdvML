@@ -2,8 +2,6 @@
 
 ## 1. Helpful Notebooks & Discussion Posts
 
-I reviewed the competition notebooks to see what strategies other people are using. Here are the main ones that I found insightful and could realistically apply:
-
 1. **[Irrigation HGBC, XGB, LGBM, CatB, RealMLP Baseline](https://www.kaggle.com/code/kospintr/irrigation-hgbc-xgb-lgbm-catb-realmlp-baseline)**
    - I chose this notebook because it provides a really good benchmark using multiple different gradient boosting frameworks (XGBoost, CatBoost, LightGBM). Having a clear baseline like this makes it easier to test my own models and see if I'm actually making progress.
 
