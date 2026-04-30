@@ -27,14 +27,14 @@ I aggregated these models using two ensemble techniques: **Soft Voting (Probabil
 
 | Model Approach | Validation Accuracy | Estimated LB Score |
 | :--- | :--- | :--- |
-| **LightGBM (Base)** | ~0.983 | [Pending] |
-| **CatBoost (Base)** | ~0.982 | [Pending] |
-| **Naive Bayes (Base)** | ~0.760 | [Pending] |
-| **Voting Ensemble (Soft)** | ~0.984 | [Pending] |
-| **Stacking Classifier** | **~0.986** | **[Pending]** |
+| **LightGBM (Base)** | ~0.983 | - |
+| **CatBoost (Base)** | ~0.982 | - |
+| **Naive Bayes (Base)** | ~0.760 | - |
+| **Voting Ensemble (Soft)** | ~0.984 | - |
+| **Stacking Classifier** | **~0.986** | **0.95812** |
 
 ### Discussion
 
 * **What worked well:** The Stacking Classifier significantly outperformed the individual baseline models. Because Naive Bayes makes very different types of errors compared to the heavily correlated tree models (LightGBM/CatBoost), the Logistic Regression meta-model was able to learn *when* to trust the tree models and *when* to listen to the probabilistic baseline, resulting in a measurable performance bump. Furthermore, checking feature importances revealed that the custom `Temp_Humidity_Index` was consistently used by LightGBM to split upper nodes.
-* **What didn't work well:** The Naive Bayes model on its own is quite weak compared to gradient boosting. Because of this, assigning it an equal weight in a standard probability average (Soft Voting) almost dragged the ensemble down. I had to manually reduce its weight to `[2, 2, 1]` to ensure it didn't override the highly accurate trees.
+* **What didn't work well:** The Naive Bayes model on its own is quite weak compared to gradient boosting. Because of this, assigning it an equal weight in a standard probability average (Soft Voting) almost dragged the ensemble down. Furthermore, looking at the Public Leaderboard, our Stacking Classifier scored **0.95812**, which is actually slightly *lower* than the raw HW3 XGBoost and LightGBM baseline submissions (~0.965-0.966). This implies that stacking the models and including a weak learner like Naive Bayes may have led to slight overfitting on the training distribution, causing it to generalize less effectively to the unseen Kaggle test set.
 * **Moving Forward:** Moving forward, I will exclusively use Stacking rather than manual Voting when integrating diverse models. The meta-learner is far superior at mathematically determining the optimal weights for weak vs. strong models compared to manual tuning. I will also continue engineering grouped statistical features (like `Crop_Mean_Rainfall_Diff`) as they provide powerful context to the algorithms.
